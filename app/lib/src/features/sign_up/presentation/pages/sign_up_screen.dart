@@ -5,8 +5,8 @@ import 'package:app/src/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class SignInScreen extends StatelessWidget {
                   color: CommonColors.colorRed,
                   borderRadius: BorderRadius.circular(65.r)),
               child: Text(
-                "Sign in",
+                "Sign up",
                 style: TextStyle(
                   fontSize: 17.sp,
                   fontWeight: FontWeight.w500,
@@ -56,10 +56,10 @@ class SignInScreen extends StatelessWidget {
             SizedBox(height: 40.h),
             GestureDetector(
               onTap: () {
-                Navigator.pushReplacementNamed(context, AppRouters.signUpRoute);
+                Navigator.pushReplacementNamed(context, AppRouters.signInRoute);
               },
               child: Text(
-                "You don't have an account",
+                "You have an account",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 13.sp,
@@ -70,16 +70,6 @@ class SignInScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const Spacer(),
-            Text(
-              "By signing in, you agree to the User Agreement and Privacy Terms.",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 13.sp,
-                fontWeight: FontWeight.w400,
-                color: CommonColors.colorWhite,
-              ),
-            )
           ],
         ),
       ),
