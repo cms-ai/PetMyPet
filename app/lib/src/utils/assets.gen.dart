@@ -21,8 +21,12 @@ class $AssetsImagesGen {
   /// File path: assets/images/img_logo.svg
   SvgGenImage get imgLogo => const SvgGenImage('assets/images/img_logo.svg');
 
+  /// File path: assets/images/img_logo_white.svg
+  SvgGenImage get imgLogoWhite =>
+      const SvgGenImage('assets/images/img_logo_white.svg');
+
   /// List of all assets
-  List<dynamic> get values => [imgLoginBg, imgLogo];
+  List<dynamic> get values => [imgLoginBg, imgLogo, imgLogoWhite];
 }
 
 class Assets {

@@ -25,7 +25,7 @@ class SignUpScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 130.h),
-            Assets.images.imgLogo.svg(),
+            Assets.images.imgLogoWhite.svg(),
             SizedBox(height: 40.h),
             _buildInputWidget(
               hintText: "Email...",
@@ -37,21 +37,11 @@ class SignUpScreen extends StatelessWidget {
               controller: TextEditingController(),
             ),
             SizedBox(height: 16.h),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
-              width: double.infinity,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: CommonColors.colorRed,
-                  borderRadius: BorderRadius.circular(65.r)),
-              child: Text(
-                "Sign up",
-                style: TextStyle(
-                  fontSize: 17.sp,
-                  fontWeight: FontWeight.w500,
-                  color: CommonColors.colorWhite,
-                ),
-              ),
+            CommonButton(
+              content: "Sign up",
+              onTap: () {
+                print("Sign up");
+              },
             ),
             SizedBox(height: 40.h),
             GestureDetector(

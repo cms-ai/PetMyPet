@@ -25,7 +25,7 @@ class SignInScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 130.h),
-            Assets.images.imgLogo.svg(),
+            Assets.images.imgLogoWhite.svg(),
             SizedBox(height: 40.h),
             _buildInputWidget(
               hintText: "Email...",
@@ -37,21 +37,11 @@ class SignInScreen extends StatelessWidget {
               controller: TextEditingController(),
             ),
             SizedBox(height: 16.h),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
-              width: double.infinity,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: CommonColors.colorRed,
-                  borderRadius: BorderRadius.circular(65.r)),
-              child: Text(
-                "Sign in",
-                style: TextStyle(
-                  fontSize: 17.sp,
-                  fontWeight: FontWeight.w500,
-                  color: CommonColors.colorWhite,
-                ),
-              ),
+            CommonButton(
+              content: "Sign in",
+              onTap: () {
+                print("Hello");
+              },
             ),
             SizedBox(height: 40.h),
             GestureDetector(
