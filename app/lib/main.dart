@@ -1,4 +1,6 @@
+import 'package:app/src/features/sign_in/presentation/pages/sign_in_screen.dart';
 import 'package:app/src/features/splash/presentation/pages/splash_screen.dart';
+import 'package:app/src/routing/app_routers.dart';
 import 'package:app/src/utils/utils.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: Themes().lightTheme,
-      home: SplashScreen(),
+      initialRoute: AppRouters.splashRoute,
+      onGenerateRoute: AppRouters().onGenerateRoute,
     );
   }
 }
